@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddTodo = () => {
+const AddTodo = (props) => {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     
@@ -11,6 +11,7 @@ const AddTodo = () => {
         {
             alert('Title or Description cant be blank!!')
         }
+        props.addTodo(title, desc);
     }
     return (
         <div className="container">
